@@ -34,5 +34,8 @@ module Skeletor
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # Use UUIDs as primary key for all ActiveRecord models.
+    g.orm :active_record, primary_key_type: :uuid
   end
 end

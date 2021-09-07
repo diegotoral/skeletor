@@ -21,6 +21,7 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'fabrication'
   gem 'rspec-rails', '~> 5.0', '>= 5.0.2'
 end
 

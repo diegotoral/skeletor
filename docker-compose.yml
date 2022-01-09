@@ -6,7 +6,7 @@ x-app: &app
     dockerfile: ./.dockerdev/Dockerfile
     args:
       RUBY_VERSION: '3.0.3'
-      PG_MAJOR: '12'
+      PG_MAJOR: '14'
       NODE_MAJOR: '16'
       YARN_VERSION: '1.22.5'
       BUNDLER_VERSION: '2.2.18'
@@ -78,6 +78,7 @@ services:
       - postgres:/var/lib/postgresql/data
       - ./log:/root/log:cached
     environment:
+      POSTGRES_PASSWORD: postgres
       PSQL_HISTFILE: /root/log/.psql_history
     ports:
       - 5432
